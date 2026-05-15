@@ -1,0 +1,191 @@
+/* --- Tab Styling --- */
+.tab-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.tab-btn {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    background: #ddd;
+    border-radius: 5px;
+    font-weight: bold;
+}
+.tab-btn.active {
+    background: #4CAF50;
+    color: white;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* --- Converter & Info Styling --- */
+.converter-container, .info-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.math-box, .formula-box {
+    background: #f9f9f9;
+    border-left: 4px solid #4CAF50;
+    padding: 15px;
+    margin-top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* --- Original Button Styles Restored --- */
+#button {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    background-color: #4CAF50; /* Original Green */
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    cursor: pointer;
+    border-radius: 150px;
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    transition: background 0.2s ease;
+}
+
+#button:hover {
+    background-color: forestgreen;
+}
+
+#reset {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 150px;
+    padding: 5px 15px; /* Added a bit more side padding for look */
+    color: #45a049;
+    background-color: #d3d3d3;
+    font-weight: bold;
+    transition: background 0.2s ease;
+    transition: color 0.2s ease;
+}
+
+#reset:hover {
+    background-color: forestgreen; 
+    color: white;
+}
+
+/* --- Input Styling inside the card --- */
+#conv-input {
+    padding: 10px;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+#odds1, #odds2 {
+    width: 250px;
+    margin: 10px;
+}
+
+/* --- Result Text Styling --- */
+#result {
+    display: inline-block;
+    margin-top: 30px;
+    color: forestgreen;
+    font-weight: bolder;
+    font-size: 20px;
+    padding: 20px 20px;
+}
+
+.border {
+    border: 2px solid navy;
+}
+
+/* Container for the stake input */
+.input-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* The Green Dollar Sign ($) */
+.input-wrapper::before {
+  content: "$";
+  position: absolute;
+  left: 10px;
+  top: 47%;
+  transform: translateY(-50%);
+  color: #45a049;
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* The Light Gray "Total Stake (USD)" label */
+.input-wrapper::after {
+  content: "Total Stake (USD)";
+  position: absolute;
+  /* Adjusted to sit to the left of the number arrows */
+  right: 25px; 
+  top: 50%;
+  transform: translateY(-50%);
+  color: #c7c7cd;
+  font-size: 14px;
+  font-weight: bold;
+  pointer-events: none;
+  z-index: 2;
+}
+
+#stakes {
+    margin-top: 30px;
+    white-space: pre;
+    color: green;
+    font-weight: bold;
+    font-size: 20px
+}
+
+/* The Input Field */
+#stake {
+  height: 25px;        /* Reduced height */
+  width: 320px;        /* Adjusted width */
+  padding-left: 25px;  /* Space for $ sign */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  box-sizing: border-box;
+  display: block;
+}
+
+
+/* Target the spinners specifically */
+#stake::-webkit-inner-spin-button, 
+#stake::-webkit-outer-spin-button {
+  opacity: 1;
+  /* This forces the browser to place them at the very edge */
+  position: absolute;
+  right: 2px;
+  height: 80%;
+  cursor: pointer;
+  margin: 0;
+}
+
+#toggle-conv {
+    color: white;
+    background: #4CAF50;
+    font-size: 14px;
+    font-weight: boldest;
+    padding: 8px 15px;
+    transition: background 0.2s ease;
+    /* transition: color 0.2s ease; */
+}
+
+#toggle-conv:hover {
+    background-color: forestgreen;
+    color: white
+}
